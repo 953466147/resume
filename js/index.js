@@ -40,7 +40,7 @@ window.onload = function () {
     }
     b();
     /* 点击音频暂停 */
-    
+
     let music = document.getElementById('music'),
         mPlay = document.getElementById('mPlay');
     mPlay.onclick = function () {
@@ -70,27 +70,44 @@ window.onload = function () {
     sj(OUT);
     sj(INNER);
     /* 手机隐藏目录 */
-    let muen=document.querySelector('.muen'),
-        phone=document.querySelector('.phone_page'),
-        listI=muen.querySelectorAll('i');
-    muen.onclick=function(){
-        for(let i=0;i<listI.length;i++){
-            
+    let muen = document.querySelector('.muen'),
+        phone = document.querySelector('.all_p'),
+        listI = muen.querySelectorAll('i');
+    muen.onclick = function () {
+        let p = phone.style.display;
+        if (p == 'none') {
+            phone.style.display = 'block';
+            listI[0].style.transform = "translateY(5px) rotate(45deg)";
+            listI[1].style.display = "none";
+            listI[2].style.transform = " translateY(-10px) rotate(-45deg)";
+        } else {
+            phone.style.display = 'none';
+            listI[0].style.transform = "none";
+            listI[1].style.display = "block";
+            listI[2].style.transform = " none";
         }
-        let p=phone.style.display;
-        if(p=='none'){
-            phone.style.display='block';
-            listI[0].style.transform="translateY(5px) rotate(45deg)";
-            listI[1].style.display="none";
-            listI[2].style.transform=" translateY(-10px) rotate(-45deg)";
-        }else{
-            phone.style.display='none';
-            listI[0].style.transform="none";
-            listI[1].style.display="block";
-            listI[2].style.transform=" none";
+    }
+    phone.onclick = function () {
+        phone.style.display = 'none';
+        listI[0].style.transform = "none";
+        listI[1].style.display = "block";
+        listI[2].style.transform = " none";
+    }
+    let page = document.querySelector('.all_page'),
+        listPage = page.querySelectorAll('span'),
+        data = [
+            '首页',
+            '关于我',
+            '技能栈',
+            '工作经历',
+            '作品集',
+            '联系我'
+        ]
+    for (let i = 0; i < listPage.length; i++) {
+        for (j = 0; j < data.length; j++) {
+            listPage[i].innerHTML = data[i];
         }
     }
 
     console.log('本站模仿：https://www.flqin.com/ 本站采用swiper+jQuery+Bootstrap构建完成的静态页面，页面已开源到我的github上')
 }
-

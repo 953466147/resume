@@ -175,9 +175,7 @@ body {
     color: #fff;
 }
 
-.z_index1 hr {
-    border-bottom: 1px solid #666;
-}
+.all_page span:first-child::before {}
 
 .swiper-slide:nth-child(2) {
     background: #0F8D82 url(/images/hbg.png);
@@ -727,8 +725,11 @@ body {
         padding-top: 20px;
     }
 
-    .all_page {
-        display: none;
+
+    .all_page .swiper-pagination-bullet {
+        width: 100px;
+        height: 50px;
+        border-radius: 0.1em;
     }
 
     #nav {
@@ -765,40 +766,41 @@ body {
         border-radius: 4px;
         transition: all 0.35s;
     }
+
     .phone {
         display: block;
-        float:right;
+        float: right;
         padding: 1em;
     }
 
-    .phone_page {
+    .all_p {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         text-align: right;
-        padding: 0 2em;
         border-bottom: 100vh solid rgba(0, 0, 0, .5);
         border-left: 32vh solid transparent;
         z-index: 10;
-        transition: all 5s;
+        margin:0;
     }
-
-    .phone_page ul {
-        padding: 0;
+    .all_page{
+        display: block;
+        width: 50px;
+        position: absolute;
         margin-top: 10em;
+        /* right: 10%; */
+    
+    }
+    .all_page span{
+        margin-top:1em;
+        font-size: 1.5em;
+        color:#333;
+        line-height: 50px;
+        background: #fff;
     }
 
-    .phone_page ul li {
-        line-height: 3.5em;
-    }
-
-    .phone_page ul li a {
-        font-size: 1.4em;
-        color: #fff;
-
-    }
 }
 
 @media screen and (max-width:768px) {

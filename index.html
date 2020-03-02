@@ -46,16 +46,9 @@
             </div>
         </nav>
         <div class="phone_page" style="display:none;">
-            <ul>
-                <li><a href="javascript:;">首页</a></li>
-                <li><a href="javascript:;">关于我</a></li>
-                <li><a href="javascript:;">技能栈</a></li>
-                <li><a href="javascript:;">工作经历</a></li>
-                <li><a href="javascript:;">作品集</a></li>
-                <li><a href="javascript:;">联系我</a></li>
-            </ul>
+
         </div>
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="con">
             <!-- #1 -->
             <div class="swiper-slide he1" id="page_1">
                 <div class="z_index1">
@@ -273,7 +266,10 @@
             </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination all_page"></div>
+        <div class="all_p" style="display: none;">
+            <div class="swiper-pagination all_page"></div>
+        </div>
+        
     </div>
     <audio autoplay="autoplay" -weibkit-autoplay="autoplay" loop="loop" preload="auto" id="music">
         <source src="/music/maqye.mp3" type="audio/mpeg">
